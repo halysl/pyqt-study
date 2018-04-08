@@ -4,9 +4,9 @@ import sys
 from PyQt5.QtWidgets import QApplication, QGridLayout, QPushButton, QWidget
 
 # 创建网格布局类，继承自QWidget类
-class gridPosition(QWidget):
+class gridLayout(QWidget):
 	def __init__(self):
-		super(gridPosition, self).__init__()
+		super(gridLayout, self).__init__()
 		self.initUI()
 
 	def initUI(self):
@@ -33,10 +33,10 @@ class gridPosition(QWidget):
 			grid.addWidget(button, *position)
 
 		self.move(300, 150)
-		self.setWindowTitle('grid layout')
+		self.setWindowTitle('Grid Layout')
 		self.show()
 
 if __name__ == "__main__":
 	app = QApplication(sys.argv)
-	gp = gridPosition()
+	gp = gridLayout()
 	sys.exit(app.exec_())

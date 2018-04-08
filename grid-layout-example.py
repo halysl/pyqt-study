@@ -36,7 +36,7 @@ class gridLayoutExample(QWidget):
 		self.setLayout(grid)
 
 		self.setGeometry(300, 300, 350, 300)
-		self.setWindowTitle('Review')
+		self.setWindowTitle('Grid Layout Example')
 		self.show()
 
 

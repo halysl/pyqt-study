@@ -5,11 +5,12 @@ from PyQt5.QtWidgets import QApplication, QPushButton, QHBoxLayout, QVBoxLayout,
 
 
 '''
-箱布局，引入拉伸概念，将小组件放在大致的方位，可随着窗体变化而变化
+创建箱布局类，继承自QWidget类
+引入拉伸概念，将小组件放在大致的方位，可随着窗体变化而变化
 '''
-class box_position(QWidget):
+class boxLayout(QWidget):
 	def __init__(self):
-		super(box_position, self).__init__()
+		super(boxLayout, self).__init__()
 		self.initUI()
 
 	def initUI(self):
@@ -29,11 +30,11 @@ class box_position(QWidget):
 		self.setLayout(vbox)
 
 		self.setGeometry(300, 300, 250, 150)
-		self.setWindowTitle('box position')
+		self.setWindowTitle('Box Layout')
 		self.show()
 
 
 if __name__ == "__main__":
 	app =QApplication(sys.argv)
-	bp = box_position()
+	bp = boxLayout()
 	sys.exit(app.exec_())

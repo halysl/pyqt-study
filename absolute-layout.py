@@ -5,11 +5,12 @@ from PyQt5.QtWidgets import QApplication, QLabel, QWidget
 
 
 '''
-绝对定位，给出一个坐标值，将控件放入该坐标，不随窗体变化而变化
+创建绝对定位类，继承自QWidget类
+给出一个坐标值，将控件放入该坐标，不随窗体变化而变化
 '''
-class absolutePosition(QWidget):
+class absoluteLayout(QWidget):
 	def __init__(self):
-		super(absolutePosition, self).__init__()
+		super(absoluteLayout, self).__init__()
 		self.initUI()
 
 	def initUI(self):
@@ -24,11 +25,11 @@ class absolutePosition(QWidget):
 		lab3.move(55, 70)
 
 		self.setGeometry(300, 300, 250, 150)
-		self.setWindowTitle('absolute Position')
+		self.setWindowTitle('Absolute Layout')
 		self.show()
 
 
 if __name__ == "__main__":
 	app = QApplication(sys.argv)
-	ap = absolutePosition()
+	ap = absoluteLayout()
 	sys.exit(app.exec_())
