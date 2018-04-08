@@ -24,7 +24,7 @@ class Example(QMainWindow):
 
 		self.statusBar()
 
-		# 创建一个菜单栏
+		# 创建一个工具栏，工具栏就是将菜单栏里的某些频繁使用的操作拿出来，以一个图标的形式展示
 		self.toolbar = self.addToolBar('Exit')
 		self.toolbar.addAction(exitAction)
 

@@ -18,7 +18,7 @@ class Example(QWidget):
 		# setGeometry方法需要四个参数，分别代表窗口在屏幕中的x轴和y轴，窗口的宽度和高度，等于实现了resize+move
 		self.setGeometry(300, 300, 300, 300) 
 		self.setWindowTitle('Icon')
-		self.setWindowIcon(QIcon('../web.ico'))
+		self.setWindowIcon(QIcon('web'))  # 设置图标文件，默认在窗口左上角
 
 		self.show()
 

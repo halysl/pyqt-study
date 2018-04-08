@@ -17,7 +17,7 @@ class Example(QMainWindow):
 
 		# 先创造一个QAction对象，该对象完成特定功能的抽象行为
 		# 例如可以对某操作指定快捷键，添加状态栏提示，连接某个实际的操作
-		exitAction = QAction(QIcon('exit.png'), '&Exit', self) # 添加图标、添加“Exit”标示（&代表下划线）
+		exitAction = QAction(QIcon('web'), '&Exit', self) # 添加图标、添加“Exit”标示（&代表下划线）
 		exitAction.setShortcut('Ctrl+Q') # 指定快捷键
 		exitAction.setStatusTip('Exit Application') # 添加状态栏提示
 		exitAction.triggered.connect(qApp.quit) # 触发某个操作
