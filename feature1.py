@@ -6,24 +6,20 @@ from PyQt5.QtWidgets import (QApplication, QStatusBar, QGridLayout,
 	                         QMainWindow, QLabel, QTextEdit)
 
 
+# 目的设计出一个界面，实时输出全局按键次数
 class editorWithCount(QMainWindow):
 	def __init__(self):
 		super(editorWithCount, self).__init__()
 		self.initUI()
 
-	def initUI(self):
+	def initUI(self):		
 
-		grid = QGridLayout()
-		grid.setSpacing(10)
-
-		count = 0
-		self.text = "count:{0}".format(count)
-
-		self.label = QLabel(self.text, self)
-		grid.addWidget(self.label, 1, 0)
+		label = QLabel('0', self)
+		label.move(15,10)
 
 		textEdit = QTextEdit(self)
-		grid.addWidget(self.textEdit, 1, 1)
+		textEdit.move(30,10)		
+
 
 		self.setGeometry(300, 300, 250, 150)
 		self.setWindowTitle('Editor With Count')

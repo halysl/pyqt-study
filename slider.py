@@ -23,7 +23,7 @@ class slider(QWidget):
         sld.valueChanged[int].connect(self.changeValue)
 
         self.label = QLabel(self)
-        self.label.setPixmap(QPixmap('web'))
+        self.label.setPixmap(QPixmap('mute'))
         self.label.setGeometry(160, 40, 80, 30)
 
         self.setGeometry(300, 300, 280, 170)
@@ -35,7 +35,7 @@ class slider(QWidget):
 
         if value == 0:
             self.label.setPixmap(QPixmap('mute.png'))
-        elif value > 0 and value <= 30:
+        elif value > 0 and value <= 50:
             self.label.setPixmap(QPixmap('min.png'))        
         else:
             self.label.setPixmap(QPixmap('max.png'))
